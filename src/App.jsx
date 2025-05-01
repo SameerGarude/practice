@@ -1,11 +1,27 @@
+import { useState } from "react";
+
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600">
       {/* Navbar */}
       <nav className="bg-gray-800 p-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="text-white text-xl font-bold">MySite</div>
-          <div className="space-x-4">
+
+          {/* Hamburger for Mobile */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white text-2xl focus:outline-none"
+            >
+              ☰
+            </button>
+          </div>
+
+          {/* Menu links for desktop */}
+          <div className="hidden md:flex space-x-4">
             <a href="#" className="text-white hover:text-blue-400">
               Home
             </a>
@@ -20,10 +36,28 @@ function App() {
             </a>
           </div>
         </div>
+
+        {/* Menu links for mobile */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-2 space-y-2 px-2">
+            <a href="#" className="block text-white hover:text-blue-400">
+              Home
+            </a>
+            <a href="#" className="block text-white hover:text-blue-400">
+              About
+            </a>
+            <a href="#" className="block text-white hover:text-blue-400">
+              Services
+            </a>
+            <a href="#" className="block text-white hover:text-blue-400">
+              Contact
+            </a>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center min-h-[60vh] px-4">
         <div className="bg-white p-6 md:p-8 rounded-lg shadow-md text-center max-w-md w-full">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">Welcome!</h1>
           <p className="text-gray-600 mb-6">
@@ -37,6 +71,35 @@ function App() {
           </a>
         </div>
       </div>
+
+      {/* Features Section */}
+      <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {["Fast", "Responsive", "Beautiful"].map((item, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg p-6 shadow text-center"
+          >
+            <h3 className="text-xl font-semibold text-gray-800">{item}</h3>
+            <p className="text-gray-600 mt-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-indigo-700 text-white py-10 text-center">
+        <h2 className="text-2xl font-bold">Ready to dive in?</h2>
+        <p className="mt-2 mb-4">Start building your next project with us.</p>
+        <button className="bg-white text-indigo-700 px-6 py-2 rounded font-semibold hover:bg-gray-100">
+          Join Now
+        </button>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white text-center py-4">
+        <p>© 2025 SameerGarude. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
