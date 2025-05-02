@@ -72,6 +72,18 @@ function App() {
         </div>
       </div>
 
+      {/* About Section */}
+      <section className="py-12 bg-white text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">About Us</h2>
+          <p className="text-gray-600">
+            We are a passionate team building modern web experiences with React
+            and Tailwind CSS. Our goal is to create fast, responsive, and
+            visually stunning websites.
+          </p>
+        </div>
+      </section>
+
       {/* Features Section */}
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
         {["Fast", "Responsive", "Beautiful"].map((item, index) => (
