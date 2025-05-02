@@ -1,7 +1,13 @@
 import { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600">
@@ -57,7 +63,10 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <div className="flex items-center justify-center min-h-[60vh] px-4">
+      <div
+        className="flex items-center justify-center min-h-screen"
+        data-aos="fade-up"
+      >
         <div className="bg-white p-6 md:p-8 rounded-lg shadow-md text-center max-w-md w-full">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">Welcome!</h1>
           <p className="text-gray-600 mb-6">
@@ -73,7 +82,7 @@ function App() {
       </div>
 
       {/* About Section */}
-      <section className="py-12 bg-white text-center">
+      <section className="py-12 bg-white text-center" data-aos="zoom-in-down">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">About Us</h2>
           <p className="text-gray-600">
@@ -85,7 +94,7 @@ function App() {
       </section>
 
       {/* Features Section */}
-      <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6 ">
         {["Fast", "Responsive", "Beautiful"].map((item, index) => (
           <div
             key={index}
