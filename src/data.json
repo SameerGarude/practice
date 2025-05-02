@@ -1,0 +1,73 @@
+{
+  "aboutMe": {
+    "name": "Sameer Garude",
+    "description": "Experienced and collaborative Software Developer with a passion for team-oriented environments. Seeking a long-term opportunity with a forward-thinking company.",
+    "details": "I am a Full Stack Developer with a passion for building scalable and efficient web applications. I specialize in JavaScript, React, Node.js, and backend technologies. I enjoy working in collaborative environments and solving complex problems.",
+    "image": "/sameer.jpg"
+  },
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "Java",
+    "SQL",
+    "C++",
+    "HTML",
+    "CSS",
+    "Sass",
+    "React.js",
+    "Material UI",
+    "Redux",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "Spring Boot",
+    "MongoDB",
+    "MySQL",
+    "Postman",
+    "GitHub",
+    "OOP’s",
+    "DSA",
+    "API’s",
+    "Bootstrap"
+  ],
+  "hobbies": ["Gaming", "Reading Tech Blogs", "Traveling"],
+  "passions": ["Open Source", "UI/UX Design", "Clean Architecture"],
+  "education": [
+    {
+      "degree": "B.Tech in Electronics and Telecommunication",
+      "institution": "Vishwakarma Institute of Information Technology",
+      "year": "2022",
+      "CGPA": "9.19/10.0"
+    },
+    {
+      "degree": "Higher Secondary in Science",
+      "institution": "FIITJEE Junior College",
+      "year": "2018",
+      "percentage": "92.80%"
+    }
+  ],
+  "workExperience": [
+    {
+      "role": "Full Stack Developer",
+      "company": "Flipit It Solutions",
+      "years": "Jan 2023–Present",
+      "location": "Pune, Maharashtra",
+      "details": [
+        "Collaborate with the design team to implement user interfaces using HTML, CSS, JavaScript, React JS, and Node JS.",
+        "Work with server-side technologies such as Node.js, Express.js, and Rails to build scalable web applications.",
+        "Develop and maintain APIs to facilitate seamless communication between frontend and backend systems.",
+        "Currently working as an 'IT Support Engineer for Web Development'."
+      ]
+    },
+    {
+      "role": "Summer Intern",
+      "company": "Electro Wave Technology",
+      "years": "May 2022–Dec 2022",
+      "location": "Hyderabad, TS",
+      "details": [
+        "Coded on various sensors and created pages for reading the sensor data.",
+        "Improved the usability and design of existing pages based on team reviews."
+      ]
+    }
+  ]
+}
